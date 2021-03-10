@@ -12,6 +12,13 @@ body, html{
 	width: 60px;
 }
 
+#ChatHolder{
+	padding: 20px;
+}
+
 #Chat{
+	position: absolute;
+	height: 90%;
+	width: calc(100% - 30px);
 	overflow-y: auto;
 }

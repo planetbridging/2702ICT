@@ -55,7 +55,7 @@
             
 
         
-            
+          
 
         </div>
 
@@ -77,17 +77,17 @@
             <ul class="nav nav-pills nav-fill">
                 <li class="nav-item">
                     <button id="ChatToggle" type="button" class="btn btn-dark">
-                        Chat <!--<span class="badge badge-primary">4</span>-->
+                        Chat <span id="unique_users" class="badge badge-primary">0</span>
                     </button>
                 </li>
-                <li class="nav-item"><input id="UserName"  type="text" width="48" placeholder="Name"></li>
+                <li class="nav-item"><input id="UserName"  type="text" width="48" placeholder="Name" disabled></li>
                 <li class="nav-item"></li><div ng-controller="AnotherController">
                   <p class="text-light">{{valueService.value}}</p>
                 </div></li>
               </ul>
             
            
-            <div id="Chat" class="w-100 h-75 d-none">
+            <div id="Chat" class="d-none p-3">
               <div ng-controller="MsgController"> 
                 <ul class="list-group" ng-repeat="msg in tags">
                         <li class="list-group-item disabled"> 
@@ -101,9 +101,9 @@
             </div>
                 <div id="SendChat" class="fixed-bottom bg-dark p-2 w-100">
                     <div class="input-group mb-3">
-                    <input type="text" class="form-control" placeholder="send a message">
+                    <input id="TxtMsg" type="text" class="form-control" placeholder="send a message">
                     <div class="input-group-append">
-                      <button class="btn btn-outline-secondary" type="button">Send</button>
+                      <button id="BtnMsg"  class="btn btn-outline-secondary" type="button">Send</button>
                     </div>
                   </div>
                 </div>
