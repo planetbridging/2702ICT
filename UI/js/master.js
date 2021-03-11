@@ -27,6 +27,32 @@ function BtnPress(id) {
   }
 }
 
+function LinkPress(href) {
+  console.log(href);
+
+  if (href == "#task1") {
+    $("#ShowLink").attr("href", "/exercises/week1/task1");
+    $("#ShowPath").text("Week 1 Task 1 /exercises/week1/task1");
+    $("#ShowCase").attr("src", "/exercises/week1/task1");
+  } else if (href == "#task2") {
+    $("#ShowLink").attr("href", "/exercises/week1/task2");
+    $("#ShowPath").text("Week 1 Task 1 /exercises/week1/task2");
+    $("#ShowCase").attr("src", "/exercises/week1/task2");
+  } else if (href == "#task3") {
+    $("#ShowLink").attr("href", "/exercises/week1/task3");
+    $("#ShowPath").text("Week 1 Task 1 /exercises/week1/task3");
+    $("#ShowCase").attr("src", "/exercises/week1/task3");
+  } else if (href == "#task4") {
+    $("#ShowLink").attr("href", "/exercises/week1/task4");
+    $("#ShowPath").text("Week 1 Task 1 /exercises/week1/task4");
+    $("#ShowCase").attr("src", "/exercises/week1/task4");
+  } else if (href == "#task5") {
+    $("#ShowLink").attr("href", "/exercises/week1/task5");
+    $("#ShowPath").text("Week 1 Task 1 /exercises/week1/task5");
+    $("#ShowCase").attr("src", "/exercises/week1/task5");
+  }
+}
+
 var socket = io();
 var LstMsgs = [];
 var LstUniqId = [];
@@ -118,6 +144,10 @@ angular.element(document).ready(function () {
 
   $("button").click(function () {
     BtnPress($(this).attr("id"));
+  });
+
+  $("a").click(function () {
+    LinkPress($(this).attr("href"));
   });
 
   $("#UserName").val(random_name);
