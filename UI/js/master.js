@@ -29,27 +29,20 @@ function BtnPress(id) {
 
 function LinkPress(href) {
   console.log(href);
+  var weeknumber = 1;
+  var tasknumber = 1;
 
-  if (href == "#task1") {
-    $("#ShowLink").attr("href", "/exercises/week1/task1");
-    $("#ShowPath").text("Week 1 Task 1 /exercises/week1/task1");
-    $("#ShowCase").attr("src", "/exercises/week1/task1");
-  } else if (href == "#task2") {
-    $("#ShowLink").attr("href", "/exercises/week1/task2");
-    $("#ShowPath").text("Week 1 Task 1 /exercises/week1/task2");
-    $("#ShowCase").attr("src", "/exercises/week1/task2");
-  } else if (href == "#task3") {
-    $("#ShowLink").attr("href", "/exercises/week1/task3");
-    $("#ShowPath").text("Week 1 Task 1 /exercises/week1/task3");
-    $("#ShowCase").attr("src", "/exercises/week1/task3");
-  } else if (href == "#task4") {
-    $("#ShowLink").attr("href", "/exercises/week1/task4");
-    $("#ShowPath").text("Week 1 Task 1 /exercises/week1/task4");
-    $("#ShowCase").attr("src", "/exercises/week1/task4");
-  } else if (href == "#task5") {
-    $("#ShowLink").attr("href", "/exercises/week1/task5");
-    $("#ShowPath").text("Week 1 Task 1 /exercises/week1/task5");
-    $("#ShowCase").attr("src", "/exercises/week1/task5");
+  if (href.includes("w1") || href.includes("w2")) {
+    var tmpweek = href.split("#w");
+    if (tmpweek[1].includes("task")) {
+      var tmptask = tmpweek[1].split("task");
+      weeknumber = tmptask[0];
+      tasknumber = tmptask[1];
+      var link = "/exercises/week" + weeknumber + "/task" + tasknumber;
+      $("#ShowLink").attr("href", link);
+      $("#ShowPath").text("Week " + weeknumber + " Task 1 " + link);
+      $("#ShowCase").attr("src", link);
+    }
   }
 }
 
