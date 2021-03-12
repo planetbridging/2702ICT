@@ -10,9 +10,9 @@ function OnInputChange() {
     //document.getElementById("MainPics").style.visibility = "visible";
     PopulatePics("photos/DSC01049.JPG", "City View");
     PopulatePics("photos/DSC01066.JPG", "Ferris Wheel");
-    PopulatePics("photos/DSC02511.jpg", "Red building");
-    PopulatePics("photos/DSC03810.jpg", "City");
-    PopulatePics("photos/DSC05750.jpg", "Sunset");
+    PopulatePics("photos/DSC02511.JPG", "Red building");
+    PopulatePics("photos/DSC03810.JPG", "City");
+    PopulatePics("photos/DSC05750.JPG", "Sunset");
   } else {
     for (var i = 0; i < x; i++) {
       PopulatePics("photos/DSC01049.JPG", "City View");
