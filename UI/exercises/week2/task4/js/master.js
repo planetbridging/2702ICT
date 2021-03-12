@@ -1,9 +1,9 @@
 var lstpics = [
   ["photos/DSC01049.JPG", "City View"],
   ["photos/DSC01066.JPG", "Ferris Wheel"],
-  ["photos/DSC02511.jpg", "Red building"],
+  ["photos/DSC02511.JPG", "Red building"],
   ["photos/DSC03810.JPG", "City View"],
-  ["photos/DSC05750.jpg", "Sunset"],
+  ["photos/DSC05750.JPG", "Sunset"],
 ];
 
 document.addEventListener("DOMContentLoaded", function (event) {
