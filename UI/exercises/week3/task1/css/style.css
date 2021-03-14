@@ -1,0 +1,75 @@
+body,
+html {
+  margin: 0px;
+  padding: 0p;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+}
+
+@media all and (min-width: 768px) {
+  body {
+    background-color: green;
+  }
+  main {
+    display: flex;
+    flex-direction: row;
+  }
+}
+
+header {
+  background-color: black;
+  color: white;
+  margin: 0px;
+  padding: 20px;
+  text-align: center;
+  font-size: 20px;
+}
+
+footer {
+  position: fixed;
+  background-color: black;
+  color: white;
+  margin: 0px;
+  padding: 10px;
+  bottom: 0px;
+  width: 100%;
+}
+
+#Albums {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  flex: 2;
+}
+
+.picholder {
+  margin: 10px;
+  border: black;
+  border-style: solid;
+  padding: 40px;
+  width: 210px;
+  height: 210px;
+  text-align: center;
+}
+/*
+
+main {
+  display: flex;
+  flex-direction: column;
+  margin: 5px;
+}*/
+
+nav {
+  flex: 1;
+}
+
+ul {
+  list-style-type: none;
+}
+
+#Login {
+  float: right;
+}
