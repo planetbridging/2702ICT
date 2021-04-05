@@ -32,7 +32,12 @@ function LinkPress(href) {
   var weeknumber = 1;
   var tasknumber = 1;
 
-  if (href.includes("w1") || href.includes("w2") || href.includes("w3")) {
+  if (
+    href.includes("w1") ||
+    href.includes("w2") ||
+    href.includes("w3") ||
+    href.includes("w4")
+  ) {
     var tmpweek = href.split("#w");
     if (tmpweek[1].includes("task")) {
       var tmptask = tmpweek[1].split("task");
