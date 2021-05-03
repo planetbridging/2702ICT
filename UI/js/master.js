@@ -36,16 +36,21 @@ function LinkPress(href) {
     href.includes("w1") ||
     href.includes("w2") ||
     href.includes("w3") ||
-    href.includes("w4")
+    href.includes("w4") ||
+    href.includes("w7")
   ) {
     var tmpweek = href.split("#w");
     if (tmpweek[1].includes("task")) {
       var tmptask = tmpweek[1].split("task");
       weeknumber = tmptask[0];
       tasknumber = tmptask[1];
-      var link = "/exercises/week" + weeknumber + "/task" + tasknumber;
+      var addist = "";
+      if(weeknumber == 7){
+        addist = "/dist"
+      }
+      var link = "/exercises/week" + weeknumber + "/task" + tasknumber + addist;
       $("#ShowLink").attr("href", link);
-      $("#ShowPath").text("Week " + weeknumber + " Task 1 " + link);
+      $("#ShowPath").text("Week " + weeknumber + " Task " + tasknumber + link);
       $("#ShowCase").attr("src", link);
     }
   }
