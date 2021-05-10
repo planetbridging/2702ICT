@@ -46,15 +46,13 @@ function LinkPress(href) {
       weeknumber = tmptask[0];
       tasknumber = tmptask[1];
       var addist = "";
-      if(weeknumber == 7){
+      if(weeknumber == 7 || weeknumber == 8){
         addist = "/dist"
       }
       var link = "/exercises/week" + weeknumber + "/task" + tasknumber + addist;
-      if(weeknumber == 8){
+      if(weeknumber == 8 && tasknumber == "234"){
         addist = "/build";
-        if(tasknumber == "234"){
-          link = "/exercises/week" + weeknumber + "/tasks" + tasknumber + addist;
-        }
+        link = "/exercises/week" + weeknumber + "/tasks" + tasknumber + addist;
       }
       $("#ShowLink").attr("href", link);
       $("#ShowPath").text("Week " + weeknumber + " Task " + tasknumber + link);
