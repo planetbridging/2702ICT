@@ -37,7 +37,8 @@ function LinkPress(href) {
     href.includes("w2") ||
     href.includes("w3") ||
     href.includes("w4") ||
-    href.includes("w7")
+    href.includes("w7") ||
+    href.includes("w8")
   ) {
     var tmpweek = href.split("#w");
     if (tmpweek[1].includes("task")) {
@@ -49,6 +50,12 @@ function LinkPress(href) {
         addist = "/dist"
       }
       var link = "/exercises/week" + weeknumber + "/task" + tasknumber + addist;
+      if(weeknumber == 8){
+        addist = "/build";
+        if(tasknumber == "234"){
+          link = "/exercises/week" + weeknumber + "/tasks" + tasknumber + addist;
+        }
+      }
       $("#ShowLink").attr("href", link);
       $("#ShowPath").text("Week " + weeknumber + " Task " + tasknumber + link);
       $("#ShowCase").attr("src", link);

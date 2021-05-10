@@ -2,7 +2,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 module.exports = {
-    entry: './index.js',
+    entry: './src/index.js',
     output: {
         filename: 'app.bundle.js',
         path: __dirname + '/dist'
@@ -24,12 +24,14 @@ module.exports = {
               {
                 test: /\.html$/i,
                 loader: 'html-loader',
-                options: {esModule: false,sources: false},
               },
+              {
+                test: /\.handlebars$/,loader: "handlebars-loader"
+              }
           ],
     },
     plugins: [
-        new HtmlWebpackPlugin({template: './index.html'}),
+        new HtmlWebpackPlugin({template: './src/index.html'}),
         new CleanWebpackPlugin(),
     ]
 };
